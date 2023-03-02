@@ -1,0 +1,96 @@
+apiVersion: netop.mgr/v1alpha1
+kind: FabricInfra
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"netop.mgr/v1alpha1","kind":"FabricInfra","metadata":{"annotations":{},"labels":{"fabric":"fab1","site":"stld"},"name":"fab1","namespace":"netop-manager"},"spec":{"credentials":{"hosts":["fab1-apic1.cam.ciscolabs.com"],"secretRef":{"name":"apic-credentials"}},"fabric_type":"aci"}}
+  creationTimestamp: "2023-01-30T12:24:06Z"
+  finalizers:
+  - fabricinfra.netop.mgr/finalizer
+  generation: 2
+  labels:
+    fabric: fab1
+    site: stld
+  managedFields:
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:fabric: {}
+          f:site: {}
+      f:spec:
+        .: {}
+        f:credentials:
+          .: {}
+          f:hosts: {}
+          f:secretRef:
+            .: {}
+            f:name: {}
+        f:fabric_type: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-01-30T12:24:06Z"
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:allocated: {}
+        f:available: {}
+        f:ready: {}
+    manager: manager
+    operation: Update
+    subresource: status
+    time: "2023-01-30T12:25:01Z"
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"fabricinfra.netop.mgr/finalizer": {}
+      f:spec:
+        f:bgp: {}
+        f:topology: {}
+    manager: manager
+    operation: Update
+    time: "2023-02-01T11:19:57Z"
+  name: fab1
+  namespace: netop-manager
+  resourceVersion: "2613487"
+  uid: 2e572128-3ce8-48a6-b4b5-7e6d1179dcf7
+spec:
+  bgp: {}
+  credentials:
+    hosts:
+    - fab1-apic1.cam.ciscolabs.com
+    secretRef:
+      name: apic-credentials
+  fabric_type: aci
+  topology: {}
+status:
+  allocated:
+  - cluster_profile: ckof1c1
+    context:
+      l3out:
+        external_networks:
+        - default_extepg
+        name: default
+      vrf:
+        name: default
+        tenant: common
+    external_subnets:
+    - 192.168.24.0/24
+    internal_subnets:
+    - 192.168.15.16/28
+    remote_as_numbers:
+    - 64512
+    vlans:
+    - 101
+  available: {}
+  ready: true
