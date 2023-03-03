@@ -1,0 +1,100 @@
+apiVersion: netop.mgr/v1alpha1
+kind: ClusterGroupProfile
+metadata:
+  creationTimestamp: "2023-02-02T05:53:14Z"
+  generation: 1
+  labels:
+    cni: acicni
+    fabric: fab2
+    site: stld
+  managedFields:
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:cni: {}
+          f:fabric: {}
+          f:site: {}
+      f:spec:
+        .: {}
+        f:config_overrides:
+          .: {}
+          f:cni: {}
+        f:selector: {}
+    manager: kubectl-create
+    operation: Update
+    time: "2023-02-02T05:53:14Z"
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:cluster-fabric-mapping: {}
+        f:state: {}
+    manager: manager
+    operation: Update
+    subresource: status
+    time: "2023-02-02T05:53:40Z"
+  name: f2acicni
+  namespace: netop-manager
+  resourceVersion: "2737184"
+  uid: cf7e0726-8192-4223-90bf-8ed78e0f1ecd
+spec:
+  config_overrides:
+    aci_cni_config:
+      aci_config:
+        vmm_domain:
+          mcast_range: {}
+          nested_inside: {}
+      kube_config:
+        drop_log_config: {}
+        istio_config: {}
+        multus: {}
+        nodepodif_config: {}
+        operator_managed_config: {}
+        sriov_config: {}
+      logging: {}
+      net_config: {}
+      registry: {}
+    aci_config:
+      cluster_l3out:
+        bgp:
+          peering: {}
+        svi: {}
+        vrf: {}
+      l3out: {}
+      physical_domain: {}
+      vrf: {}
+    calico_cni_config: {}
+    cko_proxy_config: {}
+    cni: aci
+    connectivity_checker:
+      reachability_test_enable:
+        external_url: {}
+        periodic_sync: {}
+    context:
+      l3out: {}
+      vrf: {}
+    distro: {}
+    fabricinfra: {}
+    gitops:
+      base64_encoded_argo_manifests: ""
+    lb_config: {}
+    monitoring_config: {}
+    net_config: {}
+    operator_config: {}
+    profile: {}
+    registry: {}
+    service_mesh_config: {}
+    topology: {}
+  selector:
+    matchLabels:
+      fabric: fab2
+      site: stld
+status:
+  cluster-fabric-mapping:
+  - cluster: ckof2c1
+    fabric: fab2
+  state: true
