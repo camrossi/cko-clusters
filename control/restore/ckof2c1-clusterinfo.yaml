@@ -1,0 +1,226 @@
+apiVersion: netop.mgr/v1alpha1
+kind: ClusterInfo
+metadata:
+  creationTimestamp: "2023-02-02T05:53:40Z"
+  finalizers:
+  - netop.mgr/finalizer
+  generation: 2
+  managedFields:
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"netop.mgr/finalizer": {}
+    manager: ansible-operator
+    operation: Update
+    time: "2023-02-02T05:53:40Z"
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"6961f1f5-a8d2-47d0-8e68-e54e047d64e8"}: {}
+      f:spec:
+        .: {}
+        f:config_overrides:
+          .: {}
+          f:aci_cni_config:
+            .: {}
+            f:aci_config:
+              .: {}
+              f:aep: {}
+              f:vmm_domain:
+                .: {}
+                f:encap_type: {}
+                f:mcast_range:
+                  .: {}
+                  f:end: {}
+                  f:start: {}
+                f:nested_inside: {}
+            f:kube_config:
+              .: {}
+              f:drop_log_config: {}
+              f:istio_config: {}
+              f:multus: {}
+              f:nodepodif_config: {}
+              f:operator_managed_config: {}
+              f:sriov_config: {}
+            f:logging: {}
+            f:net_config:
+              .: {}
+              f:extern_static: {}
+              f:node_svc_subnet: {}
+              f:service_vlan: {}
+            f:registry: {}
+          f:aci_config:
+            .: {}
+            f:cluster_l3out:
+              .: {}
+              f:bgp:
+                .: {}
+                f:peering: {}
+              f:svi: {}
+            f:l3out:
+              .: {}
+              f:external_networks: {}
+              f:name: {}
+            f:physical_domain: {}
+            f:vrf:
+              .: {}
+              f:name: {}
+              f:tenant: {}
+          f:calico_cni_config: {}
+          f:cko_proxy_config: {}
+          f:cni: {}
+          f:connectivity_checker:
+            .: {}
+            f:reachability_test_enable:
+              .: {}
+              f:external_url: {}
+              f:periodic_sync: {}
+          f:context:
+            .: {}
+            f:aep: {}
+            f:l3out:
+              .: {}
+              f:external_networks: {}
+              f:name: {}
+            f:vrf:
+              .: {}
+              f:name: {}
+              f:tenant: {}
+          f:distro:
+            .: {}
+            f:flavor: {}
+            f:platform: {}
+            f:type: {}
+          f:fabricinfra:
+            .: {}
+            f:name: {}
+          f:gitops:
+            .: {}
+            f:base64_encoded_argo_manifests: {}
+          f:lb_config: {}
+          f:monitoring_config: {}
+          f:net_config:
+            .: {}
+            f:cluster_svc_subnet: {}
+            f:extern_dynamic: {}
+            f:kubeapi_vlan: {}
+            f:node_subnet: {}
+            f:pod_subnet: {}
+          f:operator_config:
+            .: {}
+            f:mode: {}
+            f:target_version: {}
+          f:profile: {}
+          f:registry: {}
+          f:service_mesh_config: {}
+          f:topology: {}
+    manager: manager
+    operation: Update
+    time: "2023-02-02T05:53:40Z"
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:config_overrides:
+          f:aci_config:
+            f:system_id: {}
+    manager: OpenAPI-Generator
+    operation: Update
+    time: "2023-02-02T05:53:48Z"
+  name: ckof2c1
+  namespace: netop-manager
+  ownerReferences:
+  - apiVersion: netop.mgr/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ClusterProfile
+    name: ckof2c1
+    uid: 6961f1f5-a8d2-47d0-8e68-e54e047d64e8
+  resourceVersion: "2737203"
+  uid: cc683fc9-2a52-4b39-bd7b-1617465ba40e
+spec:
+  config_overrides:
+    aci_cni_config:
+      aci_config:
+        aep: ACI_AttEntityP
+        vmm_domain:
+          encap_type: vxlan
+          mcast_range:
+            end: 225.114.255.255
+            start: 225.114.0.1
+          nested_inside: {}
+      kube_config:
+        drop_log_config: {}
+        istio_config: {}
+        multus: {}
+        nodepodif_config: {}
+        operator_managed_config: {}
+        sriov_config: {}
+      logging: {}
+      net_config:
+        extern_static: 10.4.0.1/16
+        node_svc_subnet: 2.100.101.1/16
+        service_vlan: 102
+      registry: {}
+    aci_config:
+      cluster_l3out:
+        bgp:
+          peering: {}
+        svi: {}
+        vrf: {}
+      l3out:
+        external_networks:
+        - default_extepg
+        name: l3out
+      physical_domain: {}
+      system_id: ckof2c1
+      vrf:
+        name: k8s
+        tenant: common
+    calico_cni_config: {}
+    cko_proxy_config: {}
+    cni: aci
+    connectivity_checker:
+      reachability_test_enable:
+        external_url: {}
+        periodic_sync: {}
+    context:
+      aep: ACI_AttEntityP
+      l3out:
+        external_networks:
+        - default_extepg
+        name: l3out
+      vrf:
+        name: k8s
+        tenant: common
+    distro:
+      flavor: kubernetes-1.24
+      platform: baremetal
+      type: kubernetes
+    fabricinfra:
+      name: fab2
+    gitops:
+      base64_encoded_argo_manifests: ""
+    lb_config: {}
+    monitoring_config: {}
+    net_config:
+      cluster_svc_subnet: 10.96.0.0/12
+      extern_dynamic: 10.3.0.1/16
+      kubeapi_vlan: 101
+      node_subnet: 1.100.101.1/16
+      pod_subnet: 10.2.0.1/16
+    operator_config:
+      mode: managed
+      target_version: 0.9.0
+    profile: {}
+    registry: {}
+    service_mesh_config: {}
+    topology: {}
+status:
+  status: false
