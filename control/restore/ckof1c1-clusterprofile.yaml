@@ -123,7 +123,6 @@ metadata:
         f:operator_config:
           .: {}
           f:mode: {}
-          f:version: {}
         f:ready: {}
         f:remote_as_numbers: {}
         f:vlans: {}
@@ -134,7 +133,7 @@ metadata:
     time: "2023-01-30T12:51:38Z"
   name: ckof1c1
   namespace: netop-manager
-  resourceVersion: "2305525"
+  resourceVersion: "12439841"
   uid: 31aa88f0-1e39-45f0-87e2-d503874a1cd0
 spec:
   cluster_name: ckof1c1
@@ -207,7 +206,6 @@ status:
     name: fab1
   operator_config:
     mode: managed
-    version: 0.9.0
   ready: true
   remote_as_numbers:
   - 64512

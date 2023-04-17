@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: "2023-01-30T12:25:01Z"
   finalizers:
   - netop.mgr/finalizer
-  generation: 3
+  generation: 1081
   managedFields:
   - apiVersion: netop.mgr/v1alpha1
     fieldsType: FieldsV1
@@ -16,16 +16,6 @@ metadata:
     manager: ansible-operator
     operation: Update
     time: "2023-01-30T12:25:01Z"
-  - apiVersion: netop.mgr/v1alpha1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:spec:
-        f:config_overrides:
-          f:aci_config:
-            f:system_id: {}
-    manager: OpenAPI-Generator
-    operation: Update
-    time: "2023-01-30T12:25:10Z"
   - apiVersion: netop.mgr/v1alpha1
     fieldsType: FieldsV1
     fieldsV1:
@@ -60,29 +50,13 @@ metadata:
             .: {}
             f:cluster_l3out:
               .: {}
-              f:aep: {}
               f:bgp:
                 .: {}
-                f:peering:
-                  .: {}
-                  f:aci_as_number: {}
-                  f:remote_as_number: {}
-              f:svi:
-                .: {}
-                f:floating_ip: {}
-                f:mtu: {}
-                f:secondary_ip: {}
-                f:vlan_id: {}
-            f:fabric_infra: {}
-            f:l3out:
-              .: {}
-              f:external_networks: {}
-              f:name: {}
+                f:peering: {}
+              f:svi: {}
+            f:l3out: {}
             f:physical_domain: {}
-            f:vrf:
-              .: {}
-              f:name: {}
-              f:tenant: {}
+            f:vrf: {}
           f:calico_cni_config:
             .: {}
             f:target_version: {}
@@ -104,11 +78,7 @@ metadata:
               .: {}
               f:name: {}
               f:tenant: {}
-          f:distro:
-            .: {}
-            f:flavor: {}
-            f:platform: {}
-            f:type: {}
+          f:distro: {}
           f:fabricinfra:
             .: {}
             f:name: {}
@@ -126,12 +96,8 @@ metadata:
           f:operator_config:
             .: {}
             f:mode: {}
-            f:target_version: {}
           f:profile: {}
-          f:registry:
-            .: {}
-            f:image_prefix: {}
-            f:network_operator_version: {}
+          f:registry: {}
           f:service_mesh_config: {}
           f:topology:
             .: {}
@@ -139,6 +105,16 @@ metadata:
     manager: manager
     operation: Update
     time: "2023-01-30T12:51:38Z"
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:config_overrides:
+          f:aci_config:
+            f:system_id: {}
+    manager: OpenAPI-Generator
+    operation: Update
+    time: "2023-04-17T07:25:39Z"
   name: ckof1c1
   namespace: netop-manager
   ownerReferences:
@@ -148,7 +124,7 @@ metadata:
     kind: ClusterProfile
     name: ckof1c1
     uid: 31aa88f0-1e39-45f0-87e2-d503874a1cd0
-  resourceVersion: "2305524"
+  resourceVersion: "12807070"
   uid: bb919195-6719-4f7c-9530-efc0c241b477
 spec:
   config_overrides:
@@ -169,26 +145,14 @@ spec:
       registry: {}
     aci_config:
       cluster_l3out:
-        aep: ACI_AttEntityP
         bgp:
-          peering:
-            aci_as_number: 65001
-            remote_as_number: 64512
-        svi:
-          floating_ip: 192.168.15.29/28
-          mtu: 9000
-          secondary_ip: 192.168.15.30/28
-          vlan_id: 101
+          peering: {}
+        svi: {}
         vrf: {}
-      l3out:
-        external_networks:
-        - default_extepg
-        name: default
+      l3out: {}
       physical_domain: {}
       system_id: ckof1c1
-      vrf:
-        name: default
-        tenant: common
+      vrf: {}
     calico_cni_config:
       target_version: v3.25.0
     cko_proxy_config: {}
@@ -205,10 +169,7 @@ spec:
       vrf:
         name: default
         tenant: common
-    distro:
-      flavor: calico-3.23.2
-      platform: baremetal
-      type: kubernetes
+    distro: {}
     fabricinfra:
       name: fab1
     gitops:
@@ -222,11 +183,8 @@ spec:
       pod_subnet: 192.168.23.0/24
     operator_config:
       mode: managed
-      target_version: 0.9.0
     profile: {}
-    registry:
-      image_prefix: quay.io/cko
-      network_operator_version: 0.9.0.d04f56f
+    registry: {}
     service_mesh_config: {}
     topology:
       rack:
