@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: "2023-02-02T05:53:40Z"
   finalizers:
   - netop.mgr/finalizer
-  generation: 2
+  generation: 1084
   managedFields:
   - apiVersion: netop.mgr/v1alpha1
     fieldsType: FieldsV1
@@ -31,14 +31,9 @@ metadata:
             .: {}
             f:aci_config:
               .: {}
-              f:aep: {}
               f:vmm_domain:
                 .: {}
-                f:encap_type: {}
-                f:mcast_range:
-                  .: {}
-                  f:end: {}
-                  f:start: {}
+                f:mcast_range: {}
                 f:nested_inside: {}
             f:kube_config:
               .: {}
@@ -49,11 +44,7 @@ metadata:
               f:operator_managed_config: {}
               f:sriov_config: {}
             f:logging: {}
-            f:net_config:
-              .: {}
-              f:extern_static: {}
-              f:node_svc_subnet: {}
-              f:service_vlan: {}
+            f:net_config: {}
             f:registry: {}
           f:aci_config:
             .: {}
@@ -63,15 +54,9 @@ metadata:
                 .: {}
                 f:peering: {}
               f:svi: {}
-            f:l3out:
-              .: {}
-              f:external_networks: {}
-              f:name: {}
+            f:l3out: {}
             f:physical_domain: {}
-            f:vrf:
-              .: {}
-              f:name: {}
-              f:tenant: {}
+            f:vrf: {}
           f:calico_cni_config: {}
           f:cko_proxy_config: {}
           f:cni: {}
@@ -92,11 +77,7 @@ metadata:
               .: {}
               f:name: {}
               f:tenant: {}
-          f:distro:
-            .: {}
-            f:flavor: {}
-            f:platform: {}
-            f:type: {}
+          f:distro: {}
           f:fabricinfra:
             .: {}
             f:name: {}
@@ -115,7 +96,6 @@ metadata:
           f:operator_config:
             .: {}
             f:mode: {}
-            f:target_version: {}
           f:profile: {}
           f:registry: {}
           f:service_mesh_config: {}
@@ -132,7 +112,7 @@ metadata:
             f:system_id: {}
     manager: OpenAPI-Generator
     operation: Update
-    time: "2023-02-02T05:53:48Z"
+    time: "2023-04-17T07:40:36Z"
   name: ckof2c1
   namespace: netop-manager
   ownerReferences:
@@ -142,18 +122,14 @@ metadata:
     kind: ClusterProfile
     name: ckof2c1
     uid: 6961f1f5-a8d2-47d0-8e68-e54e047d64e8
-  resourceVersion: "2737203"
+  resourceVersion: "12808437"
   uid: cc683fc9-2a52-4b39-bd7b-1617465ba40e
 spec:
   config_overrides:
     aci_cni_config:
       aci_config:
-        aep: ACI_AttEntityP
         vmm_domain:
-          encap_type: vxlan
-          mcast_range:
-            end: 225.114.255.255
-            start: 225.114.0.1
+          mcast_range: {}
           nested_inside: {}
       kube_config:
         drop_log_config: {}
@@ -163,10 +139,7 @@ spec:
         operator_managed_config: {}
         sriov_config: {}
       logging: {}
-      net_config:
-        extern_static: 10.4.0.1/16
-        node_svc_subnet: 2.100.101.1/16
-        service_vlan: 102
+      net_config: {}
       registry: {}
     aci_config:
       cluster_l3out:
@@ -174,15 +147,10 @@ spec:
           peering: {}
         svi: {}
         vrf: {}
-      l3out:
-        external_networks:
-        - default_extepg
-        name: l3out
+      l3out: {}
       physical_domain: {}
       system_id: ckof2c1
-      vrf:
-        name: k8s
-        tenant: common
+      vrf: {}
     calico_cni_config: {}
     cko_proxy_config: {}
     cni: aci
@@ -199,10 +167,7 @@ spec:
       vrf:
         name: k8s
         tenant: common
-    distro:
-      flavor: kubernetes-1.24
-      platform: baremetal
-      type: kubernetes
+    distro: {}
     fabricinfra:
       name: fab2
     gitops:
@@ -217,7 +182,6 @@ spec:
       pod_subnet: 10.2.0.1/16
     operator_config:
       mode: managed
-      target_version: 0.9.0
     profile: {}
     registry: {}
     service_mesh_config: {}

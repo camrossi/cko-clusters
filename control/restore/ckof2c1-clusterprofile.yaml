@@ -116,7 +116,6 @@ metadata:
         f:operator_config:
           .: {}
           f:mode: {}
-          f:version: {}
         f:ready: {}
         f:vlans: {}
         f:workload_cluster_manifest_locations: {}
@@ -126,7 +125,7 @@ metadata:
     time: "2023-02-02T05:53:40Z"
   name: ckof2c1
   namespace: netop-manager
-  resourceVersion: "2737187"
+  resourceVersion: "12440304"
   uid: 6961f1f5-a8d2-47d0-8e68-e54e047d64e8
 spec:
   cluster_group_profile_selector:
@@ -205,7 +204,6 @@ status:
   node_vlan: 101
   operator_config:
     mode: managed
-    version: 0.9.0
   ready: true
   vlans:
   - 101
