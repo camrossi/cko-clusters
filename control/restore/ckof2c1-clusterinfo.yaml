@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: "2023-02-02T05:53:40Z"
   finalizers:
   - netop.mgr/finalizer
-  generation: 1315
+  generation: 1316
   managedFields:
   - apiVersion: netop.mgr/v1alpha1
     fieldsType: FieldsV1
@@ -103,6 +103,16 @@ metadata:
     manager: manager
     operation: Update
     time: "2023-02-02T05:53:40Z"
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:config_overrides:
+          f:aci_config:
+            f:system_id: {}
+    manager: OpenAPI-Generator
+    operation: Update
+    time: "2023-04-18T03:11:36Z"
   name: ckof2c1
   namespace: netop-manager
   ownerReferences:
@@ -112,7 +122,7 @@ metadata:
     kind: ClusterProfile
     name: ckof2c1
     uid: 6961f1f5-a8d2-47d0-8e68-e54e047d64e8
-  resourceVersion: "12915545"
+  resourceVersion: "12915558"
   uid: cc683fc9-2a52-4b39-bd7b-1617465ba40e
 spec:
   config_overrides:
@@ -139,6 +149,7 @@ spec:
         vrf: {}
       l3out: {}
       physical_domain: {}
+      system_id: ckof2c1
       vrf: {}
     calico_cni_config: {}
     cko_proxy_config: {}
