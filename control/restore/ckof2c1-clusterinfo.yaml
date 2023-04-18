@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: "2023-02-02T05:53:40Z"
   finalizers:
   - netop.mgr/finalizer
-  generation: 1411
+  generation: 1413
   managedFields:
   - apiVersion: netop.mgr/v1alpha1
     fieldsType: FieldsV1
@@ -112,7 +112,7 @@ metadata:
     kind: ClusterProfile
     name: ckof2c1
     uid: 6961f1f5-a8d2-47d0-8e68-e54e047d64e8
-  resourceVersion: "12962239"
+  resourceVersion: "12962926"
   uid: cc683fc9-2a52-4b39-bd7b-1617465ba40e
 spec:
   config_overrides:
